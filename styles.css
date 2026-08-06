@@ -1,6 +1,101 @@
-buttons {
-    background-color: #000000;
+.Logo {
+  width: 7%;
+  left: 0;
+  top: 0;
 }
-h1 {
-    color:rgb(60, 91, 117)
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.75%;
+  overflow: hidden;
+  background-color: #313540;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+ul li {
+  float: right;
+  font-family: 'Mont', sans-serif;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  padding: 40px 40px;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+.Kali {
+  position: absolute;
+  width: 101%;
+  height: auto;
+  top: 20%;
+  right: -1.5%;
+  z-index: -1;
+}
+
+.Kali-Icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  margin-top: 634px;
+  z-index: 0;
+}
+
+.news {
+  position: absolute;
+  top: 113%;
+  text-align: left;
+  font-family: 'Archive', sans-serif;
+  font-size: 48px; 
+  display: inline-block;
+}
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  display: inline-block;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
 }
