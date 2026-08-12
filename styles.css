@@ -16,11 +16,13 @@
 
 .nav-bar .icon {
   display: none;
+  margin-left: auto;
+  align-self: center;
 }
 
-a.icon {
-  height: 100%;
-  width: auto;
+.icon .fa-bars {
+  color: white;
+  font-size: 50px;
 }
 
 .Logo {
@@ -31,15 +33,15 @@ a.icon {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0.75%;
+  padding: 0 20px;
   overflow: hidden;
   background-color: #313540;
-  left: 0;
   width: 100%;
-  z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
-.nav {
+a.nav {
   padding: 40px 40px;
 }
 
@@ -48,14 +50,13 @@ ul {
 }
 
 ul a {
-  display: inline-block;
-  flex-direction: row;
+  display: block;
   color: white;
-  justify-content: space-between;
   text-align: center;
   font-size: 23px;
   border-radius: 30px;
   text-decoration: none;
+  padding: 20px 20px;
 }
 
 .body-img {
@@ -128,32 +129,43 @@ ul a {
   text-align: center;
 }
 
-/* When you mouse over the container, fade in the overlay title */
+/* When you mouse over the container, fade in the overlay DBD text */
 .container:hover .overlay {
   opacity: 1;
 }
 
-/* When the screen is less that 600 pixels wide it hides the links in the nav bar and shows a hamburger menu icon instead */
-@media screen and (max-width: 1000px) {
-  .nav-bar a:not(:first-child) {display: none;}
-  .nav-bar a.icon {
-    float: right;
-    display: block;
+/* When the screen is less than 800 pixels wide it hides the links in the nav bar and shows a hamburger menu icon instead */
+@media screen and (max-width: 900px) {
+  .nav-bar ul a:not(:first-child) {
+    display: none;
+  }
+  
+  .nav-bar .icon {
+    display: block !important; 
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 1000px) {
-  .nav-bar.responsive {position: relative;}
-  .nav-bar.responsive a.icon {
+@media screen and (max-width: 900px) {
+  .nav-bar.responsive {
+    position: relative;
+  }
+
+  .nav-bar.responsive ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 80px;
+  }
+
+  .nav-bar.responsive ul a {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-bar.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .nav-bar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    height: 100%;
-  }
 }
+
