@@ -1,12 +1,17 @@
 * {
   box-sizing: border-box;
+  font-family: "Mont";
 }
 
+@font-face {
+  font-family: Mont;
+  src: url('mont/Mont-HeavyDEMO.ttf.otf');
+}
 .header {
   background-color: #313540;
   padding: 30px;
   text-align: center;
-  font-family: 'Archive', sans-serif;
+  font-family: 'Mont', sans-serif;
   font-size: 48px; 
 }
 
@@ -30,7 +35,7 @@
   width: 100px;
 }
 
-ul {
+.nav-bar ul {
   list-style-type: none;
   margin: 0;
   padding: 0 20px;
@@ -39,6 +44,7 @@ ul {
   width: 100%;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 a.nav {
@@ -47,9 +53,11 @@ a.nav {
 
 .nav:hover {
   background-color: #111111;
+  color:#f1f1f1;
+  text-decoration: none;
 }
 
-ul a {
+.nav-bar ul a {
   display: block;
   color: white;
   text-align: center;
@@ -65,76 +73,128 @@ ul a {
   height: auto;
 }
 
-.news {
-  text-align: left;
-  font-family: 'Archive', sans-serif;
-  font-size: 48px; 
-  display: inline-block;
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 5px;
+  position: relative;
 }
 
-* {box-sizing: border-box}
-
-.image {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-/* Container needed to position the overlay. (DBD mini event image) */
-.container {
-  position: flex;
-  width: 60%;
-  height: auto;
-  display: inline-block;
-}
-
-.ranked {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-.twitch {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-/* Container needed to position the overlay. (Ranked 3.0 image) */
-.rank-cont {
-  position: inline-block;
-  width: 30%;
-  height: auto;
-}
-
-/* Container needed to position the overlay. (twitch drops image) */
-.twitch-cont {
-  position: inline-block;
-  width: 30%;
-  height: auto;
-}
-
-/* The overlay effect - lays on top of the container and over the image */
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.8); /* Black see-through */
+  background: rgba(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
-  width: 100%;
+  width: 98%;
   transition: .5s ease;
-  opacity:0;
+  opacity: 0;
   color: white;
   font-size: 20px;
   padding: 20px;
   text-align: center;
 }
 
-/* When you mouse over the container, fade in the overlay DBD text */
-.container:hover .overlay {
+.column:hover .overlay {
   opacity: 1;
 }
 
-/* When the screen is less than 800 pixels wide it hides the links in the nav bar and shows a hamburger menu icon instead */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.opcolumn {
+  float: left;
+  width: 24.8%;
+  padding: 5px;
+  position: relative;
+}
+
+.opoverlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 98%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.opcolumn:hover .overlay {
+  opacity: 1;
+}
+
+.oprow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.news h1 {
+  text-align: center;
+}
+
+.media h1 {
+  text-align: center;
+}
+
+.recentoperators h1 {
+  text-align: center;
+}
+
+.recentop {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+}
+
+.footer {
+  background-color: #111111;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  gap: 15px;
+}
+
+.links a {
+  color: #f1f1f1;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.links :hover {
+  color: #f1f1f1;
+}
+
+.icons a {
+  color:#f1f1f1;
+  gap: 15px;
+}
+
+.copyright {
+  color:#f1f1f1;
+  text-align: right;
+  bottom: 0;
+  font-size: 15px;
+}
+
+.footer-form {
+  color:#f1f1f1;
+
+}
+
+/* When the screen is less than 900 pixels wide it hides the links in 
+the nav bar and shows a hamburger menu icon instead */
 @media screen and (max-width: 900px) {
   .nav-bar ul a:not(:first-child) {
     display: none;
@@ -143,11 +203,14 @@ ul a {
   .nav-bar .icon {
     display: block !important; 
   }
+
 }
 
 @media screen and (max-width: 900px) {
   .nav-bar.responsive {
     position: relative;
+    float:none;
+    display: block;
   }
 
   .nav-bar.responsive ul {
@@ -162,10 +225,23 @@ ul a {
     width: 100%;
   }
 
+  .nav-bar.responsive img {
+    display: none;
+  }
+
   .nav-bar.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
 }
-
+/* Responsive layout of the news section: makes the images stack on top of each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+  
+  .opcolumn {
+    width: 100%;
+  }
+}
