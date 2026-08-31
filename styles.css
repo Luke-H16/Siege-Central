@@ -159,16 +159,36 @@ a.nav {
 .footer {
   background-color: #111111;
   text-align: center;
-  padding: 10px;
+  padding: 40px 40px;
+  display: flex;
+  gap: 20px;
   font-size: 20px;
-  color: #f1f1f1;
+  color: #000000;
+}
+
+.footer ul{
+  width: 100%;
+}
+
+.footer-form {
   display: block;
-  gap: 15px;
+  color: #000000;
+  font-size: 20px;
+  max-width: 400px;
+  text-align: left !important;
+  align-items: left;
+}
+
+.btn-send {
+  color:#000000;
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
 }
 
 .links a {
   color: #f1f1f1;
-  gap: 15px;
+  padding: 20px;
   text-decoration: none;
 }
 
@@ -178,11 +198,11 @@ a.nav {
 
 .icons a {
   color:#f1f1f1;
-  gap: 15px;
+  padding: 10px;
 }
 
 .copyright {
-  color:#f1f1f1;
+  color: #f1f1f1;
   text-align: right;
   bottom: 0;
   font-size: 15px;
