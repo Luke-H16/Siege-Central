@@ -170,13 +170,36 @@ a.nav {
   width: 100%;
 }
 
-.footer-form {
+.form {
   display: block;
   color: #000000;
   font-size: 20px;
   max-width: 400px;
   text-align: left !important;
   align-items: left;
+}
+
+.about_us {
+  padding: 30px;
+}
+
+.Contact_us {
+  color:#f1f1f1;
+  background-color:#313540;
+  padding: 20px;
+}
+
+.Contact_us button {
+  color:#ffffff;
+  background-color: #313540;
+  text-align: center;
+}
+
+.Contact_us label {
+  text-align: left;
+  color: #f1f1f1;
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 .btn-send {
@@ -203,15 +226,12 @@ a.nav {
 
 .copyright {
   color: #f1f1f1;
-  text-align: right;
+  padding-top: 10px;
+  text-align: center;
   bottom: 0;
   font-size: 15px;
 }
 
-.footer-form {
-  color:#f1f1f1;
-
-}
 
 /* When the screen is less than 900 pixels wide it hides the links in 
 the nav bar and shows a hamburger menu icon instead */
@@ -254,6 +274,17 @@ the nav bar and shows a hamburger menu icon instead */
     right: 0;
     top: 0;
   }
+  .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .copyright {
+    text-align: center;
+  }
+
 }
 /* Responsive layout of the news section: makes the images stack on top of each other */
 @media screen and (max-width: 500px) {
