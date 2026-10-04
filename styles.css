@@ -278,6 +278,21 @@ a.nav {
   padding: 20px;
 }
 
+.how-to-play {
+  text-align: center;
+  padding: 20px;
+  color:#111111;
+}
+
+.maps {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
 /* When the screen is less than 900 pixels wide it hides the links in 
 the nav bar and shows a hamburger menu icon instead */
 @media screen and (max-width: 900px) {
