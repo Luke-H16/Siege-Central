@@ -113,25 +113,6 @@ a.nav {
   position: relative;
 }
 
-.opoverlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 98%;
-  transition: .5s ease;
-  opacity: 0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
-.opcolumn:hover .overlay {
-  opacity: 1;
-}
-
 .oprow::after {
   content: "";
   clear: both;
@@ -232,6 +213,70 @@ a.nav {
   font-size: 15px;
 }
 
+.operators {
+  background-color: #313540;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.attackers, .defenders {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: opacity 0.4s ease; 
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fade-out-state {
+  opacity: 0 !important;
+}
+
+.attackers img, .defenders img {
+  width: 10%;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+
+.btn-attackers, .btn-defenders, .btn-arrows {
+  background-color: #313540;
+  color: #f1f1f1;
+  border: none;
+  padding: 20px 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.livestreams {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color:#111111;
+}
+
+.videos {
+  padding: 20px;
+}
 
 /* When the screen is less than 900 pixels wide it hides the links in 
 the nav bar and shows a hamburger menu icon instead */
@@ -284,41 +329,6 @@ the nav bar and shows a hamburger menu icon instead */
   .copyright {
     text-align: center;
   }
-}
-
-.operators {
-  background-color: #313540;
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.attackers, .defenders {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  gap: 0;  
-}
-
-.attackers img, .defenders img {
-  width: 20%;
-  height: auto;
-  padding: 5px;
-  box-sizing: border-box;
-  object-fit: cover;
-}
-
-
-.btn-attackers, .btn-defenders, .btn-arrows {
-  background-color: #313540;
-  color: #f1f1f1;
-  border: none;
-  padding: 20px 40px;
-  font-size: 40px;
-  cursor: pointer;
 }
 /* Responsive layout of the news section: makes the images stack on top of each other */
 @media screen and (max-width: 500px) {
