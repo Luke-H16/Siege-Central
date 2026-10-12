@@ -183,6 +183,11 @@ a.nav {
   margin-left: 5px;
 }
 
+.Contact_us input,
+.Contact_us textarea {
+    -webkit-text-fill-color: #313540 !important;
+}
+
 .btn-send {
   color:#000000;
   background-color: #f1f1f1;
