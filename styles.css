@@ -359,4 +359,13 @@ the nav bar and shows a hamburger menu icon instead */
   .opcolumn {
     width: 100%;
   }
+  
+  .attackers img, .defenders img {
+    width: 30%;
+    padding: 2%;
+  }
+  
+  .attackers, .defenders {
+    padding: 0;
+  }
 }
