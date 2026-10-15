@@ -144,7 +144,6 @@ a.nav {
   display: flex;
   gap: 20px;
   font-size: 20px;
-  color: #000000;
 }
 
 .footer ul{
@@ -158,6 +157,10 @@ a.nav {
   max-width: 400px;
   text-align: left !important;
   align-items: left;
+}
+
+textarea{
+  resize: vertical;
 }
 
 .about_us {
@@ -189,7 +192,7 @@ a.nav {
 }
 
 .btn-send {
-  color:#000000;
+  color:#311111;
   background-color: #f1f1f1;
   padding: 5px;
   text-align: center;
@@ -221,7 +224,7 @@ a.nav {
 .operators {
   background-color: #313540;
   width: 100%;
-  padding: 40px 0;
+  padding: 40px;
   text-align: center;
 }
 
@@ -362,10 +365,10 @@ the nav bar and shows a hamburger menu icon instead */
   
   .attackers img, .defenders img {
     width: 30%;
-    padding: 2%;
+    padding: 1%;
   }
-  
-  .attackers, .defenders {
-    padding: 0;
+
+  .operators {
+    padding: 5px;
   }
 }

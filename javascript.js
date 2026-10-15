@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (set1 && set2 && btnFirst && btnSecond && btnSwap) {
     
-    // Show atatcekrs
+    // Show attackers
     btnFirst.addEventListener('click', () => {
       fadeIn(set1);
       fadeOut(set2);
